@@ -1,0 +1,21 @@
+node_modules/
+.vitepress/cache/
+.vitepress/dist/
+*.log
+
+# Local agent context and process artifacts
+.codex/
+C_context/
+HANDOFF.md
+MEMORY.md
+D_deliverables/
+R_raw/
+T_tools/
+
+# Visual iteration and archived drafts kept locally
+docs/images/v*.png
+guide/
+projects/
+products/access.md
+products/wiki.md
+.vitepress/theme/custom.css

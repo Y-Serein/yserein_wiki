@@ -1,0 +1,16 @@
+---
+title: SeryRemoteID
+description: 面向无人机 Remote ID 的硬件、固件、集成文档与支持入口。
+---
+
+<div class="ys-product-overview">
+<header class="ys-product-banner"><div><span class="ys-eyebrow">REMOTE ID HARDWARE</span><h1>SeryRemoteID</h1><p>连接飞控身份与状态数据，通过 WiFi 和 BLE 完成 Remote ID 广播的硬件与固件产品。面向无人机厂商、飞控集成商、开发者、DIY 用户和学生。</p><div class="ys-status-row"><span class="is-live">已有真实用户</span><span>完整硬件产品</span><span>APM / PX4 生态</span><span>文档建设中</span></div><div class="ys-inline-actions"><a class="ys-action is-primary" href="/products/seryremoteid/getting-started">快速开始</a><a class="ys-action" href="/downloads/">下载固件</a><a class="ys-action" href="/support/">获取支持</a></div></div><figure class="ys-product-visual"><strong>SeryRemoteID 产品实物图</strong><small>待补：正面、背面、接口和安装场景</small></figure></header>
+
+<section class="ys-overview-section"><header><h2>适合谁</h2><p>同一产品面向不同使用者，但安装、集成和开发入口必须分开。</p></header><div class="ys-audience-grid"><article><strong>无人机厂商</strong><p>关注批量集成、硬件版本、法规地区、供应和长期维护。</p></article><article><strong>飞控集成商</strong><p>关注 APM、PX4、凌动 5 等平台的连接、参数、兼容性和故障定位。</p></article><article><strong>开发者与学生</strong><p>关注开放固件、协议、构建环境、实验入口和可复现文档。</p></article></div></section>
+
+<section class="ys-overview-section"><header><h2>从飞控到广播</h2><p>SeryRemoteID 把输入、状态聚合、参数与无线广播放在同一个嵌入式产品中。</p></header><div class="ys-signal-panel"><div class="ys-signal-node"><span>INPUT</span><strong>MAVLink / DroneCAN</strong></div><i></i><div class="ys-signal-node is-core"><span>PROCESS</span><strong>Identity · State · Config</strong></div><i></i><div class="ys-signal-node"><span>OUTPUT</span><strong>WiFi / BLE</strong></div></div></section>
+
+<section class="ys-overview-section"><header><h2>产品文档</h2><p>先完成用户任务，再进入参数、验证或源码细节。</p></header><div class="ys-doc-link-grid"><a href="/products/seryremoteid/getting-started"><span>01</span><h3>快速开始</h3><p>硬件检查、接线、供电、配置和第一次广播确认。</p></a><a href="/products/seryremoteid/integrations"><span>02</span><h3>飞控集成</h3><p>按 APM、PX4 和其他飞控平台维护连接与兼容性。</p></a><a href="/products/seryremoteid/ota-recovery"><span>03</span><h3>升级与恢复</h3><p>固件版本、Web OTA、失败恢复和回滚条件。</p></a><a href="/products/seryremoteid/verification"><span>04</span><h3>验证矩阵</h3><p>区分仓库实现、编译、上板、抓包、总线和长期稳定性。</p></a><a href="/products/seryremoteid/security-compliance"><span>05</span><h3>安全与合规</h3><p>密钥、签名更新、信任边界和 Remote ID 法规责任。</p></a><a href="/products/seryremoteid/developer/"><span>06</span><h3>开发者文档</h3><p>系统架构、源码模块、构建、移植与测试。</p></a></div></section>
+
+<section class="ys-overview-section"><header><h2>当前公开边界</h2><p>以下信息会在获得真实材料后逐项更新，不以模糊宣传替代。</p></header><div class="ys-principle-grid"><article><strong>已确认</strong><p>存在完整硬件产品和实际用户；主要受众与飞控生态已明确。</p></article><article><strong>待补证据</strong><p>硬件型号、版本、实物图、接线、发布文件、兼容矩阵和实测报告。</p></article><article><strong>合规边界</strong><p>产品实现 Remote ID 链路不自动等于满足特定地区的整机认证。</p></article></div></section>
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "@yserein/wiki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0 <23.0.0"
+  },
+  "scripts": {
+    "dev": "node node_modules/vitepress/bin/vitepress.js dev --host 127.0.0.1",
+    "build": "node node_modules/vitepress/bin/vitepress.js build",
+    "preview": "node node_modules/vitepress/bin/vitepress.js preview --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "vitepress": "1.6.4"
+  }
+}
