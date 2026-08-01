@@ -15,7 +15,6 @@ export default defineConfig({
     "MEMORY.md",
     "README.md",
     "C_context/**/*.md",
-    "products/access.md",
     "products/wiki.md",
     "projects/**/*.md",
     "guide/**/*.md"
@@ -26,9 +25,10 @@ export default defineConfig({
     "Y-Serein 产品与公开资源中心：无人机硬件、嵌入式固件、桌面软件、用户文档与工程验证。",
   cleanUrls: true,
   lastUpdated: true,
+  appearance: false,
   head: [
     ["meta", { name: "theme-color", content: "#e8f1ed" }],
-    ["meta", { name: "color-scheme", content: "dark light" }],
+    ["meta", { name: "color-scheme", content: "light" }],
     ["meta", { name: "application-name", content: "Y-Serein" }],
     ["meta", { property: "og:site_name", content: "Y-Serein" }],
     ["link", { rel: "icon", type: "image/svg+xml", href: ysereinLogo }]
@@ -45,6 +45,7 @@ export default defineConfig({
         text: "产品",
         items: [
           { text: "产品总览", link: "/products/" },
+          { text: "YSerein Access", link: "/products/access" },
           { text: "SeryRemoteID", link: "/products/seryremoteid/" },
           { text: "Serein", link: "/products/serein/" }
         ]

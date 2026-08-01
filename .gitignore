@@ -4,6 +4,7 @@ node_modules/
 *.log
 
 # Local agent context and process artifacts
+.agents/
 .codex/
 C_context/
 HANDOFF.md
@@ -16,6 +17,5 @@ T_tools/
 docs/images/v*.png
 guide/
 projects/
-products/access.md
 products/wiki.md
 .vitepress/theme/custom.css

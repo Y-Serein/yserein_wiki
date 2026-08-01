@@ -28,6 +28,11 @@ features:
     link: /products/serein/
     linkText: 查看产品
   - icon: "03"
+    title: YSerein Access
+    details: Windows-first 网络服务。控制面与一次真实公网链路已经验证，持续 24×7 双节点入口仍在建设。
+    link: /products/access
+    linkText: 查看 Access
+  - icon: "04"
     title: ArduPilot Research
     details: 面向飞控、实时系统和可靠性研究的上游基线与工程工作区，不冒充独立产品。
     link: /engineering/ardupilot
@@ -46,12 +51,37 @@ features:
 <div class="ys-signal-panel" aria-label="SeryRemoteID 数据链路示意"><div class="ys-signal-node"><span>FLIGHT CONTROLLER</span><strong>APM / PX4</strong></div><i></i><div class="ys-signal-node is-core"><span>SERYREMOTEID</span><strong>IDENTITY + STATE</strong></div><i></i><div class="ys-signal-node"><span>BROADCAST</span><strong>WiFi / BLE</strong></div></div>
 </section>
 
-<section class="ys-home-section">
-<div class="ys-home-heading"><span>PRODUCT-GRADE RESOURCES</span><h2>产品不止是代码。</h2><p>一个可用项目还需要安装、配置、更新、排障、版本、兼容性和支持入口。新的站点结构围绕用户完成任务，而不是围绕仓库目录展开。</p></div>
-<div class="ys-resource-grid">
-<a href="/docs/"><span>01</span><h3>用户文档</h3><p>快速开始、完整手册、硬件接线、集成、OTA、恢复与故障排查。</p></a>
-<a href="/downloads/"><span>02</span><h3>版本与下载</h3><p>软件和固件版本、兼容硬件、校验值、升级说明与已知问题。</p></a>
-<a href="/support/"><span>03</span><h3>支持与反馈</h3><p>按产品、问题类型和安全等级进入正确的支持渠道。</p></a>
+<section class="ys-home-section ys-workflow-section">
+<aside class="ys-workflow-rail">
+<div class="ys-home-heading"><span>PRODUCT-GRADE RESOURCES</span><h2>产品不止是代码。</h2><p>围绕真实任务组织公开资源：先理解和接入，再取得可验证版本，最后进入对应支持路径。</p></div>
+<ol aria-label="公开资源路径">
+<li><a href="#workflow-docs"><span>01</span>理解与接入</a></li>
+<li><a href="#workflow-releases"><span>02</span>版本与验证</a></li>
+<li><a href="#workflow-support"><span>03</span>支持与反馈</a></li>
+</ol>
+</aside>
+<div class="ys-workflow-stage">
+<article id="workflow-docs" class="ys-workflow-panel">
+<div class="ys-workflow-copy"><span>01 / DOCUMENTATION</span><h3>先完成一次正确接入。</h3><p>从产品选择、快速开始到硬件接线与集成说明，文档按用户要完成的任务展开，而不是照搬仓库目录。</p><a href="/docs/">进入用户文档 <b aria-hidden="true">→</b></a></div>
+<div class="ys-workflow-surface" aria-label="文档路径示意">
+<div class="ys-surface-head"><span>DOCUMENT PATH</span><small>3 STEPS</small></div>
+<ol><li><i>01</i><strong>选择产品</strong><em>确认适用范围</em></li><li><i>02</i><strong>快速开始</strong><em>完成最短闭环</em></li><li><i>03</i><strong>集成与排障</strong><em>进入完整手册</em></li></ol>
+</div>
+</article>
+<article id="workflow-releases" class="ys-workflow-panel">
+<div class="ys-workflow-copy"><span>02 / RELEASES</span><h3>下载必须带着证据。</h3><p>版本、适用硬件、SHA-256、升级路径与已知问题共同构成发布记录；材料未齐全时，页面会明确标注待补。</p><a href="/downloads/">查看版本与下载 <b aria-hidden="true">→</b></a></div>
+<div class="ys-workflow-surface is-release" aria-label="发布记录字段示意">
+<div class="ys-surface-head"><span>RELEASE RECORD</span><small>VERIFIABLE</small></div>
+<dl><div><dt>VERSION</dt><dd>版本号</dd></div><div><dt>HARDWARE</dt><dd>适用硬件</dd></div><div><dt>CHECKSUM</dt><dd>SHA-256</dd></div><div><dt>RECOVERY</dt><dd>升级与回滚</dd></div></dl>
+</div>
+</article>
+<article id="workflow-support" class="ys-workflow-panel">
+<div class="ys-workflow-copy"><span>03 / SUPPORT</span><h3>把问题送到正确入口。</h3><p>普通使用、集成问题与安全事项需要不同的上下文和处理边界。支持页面先帮助用户准备必要信息，再进入对应渠道。</p><a href="/support/">前往支持中心 <b aria-hidden="true">→</b></a></div>
+<div class="ys-workflow-surface is-support" aria-label="支持分流示意">
+<div class="ys-surface-head"><span>SUPPORT ROUTING</span><small>CONTEXT FIRST</small></div>
+<ul><li><span>PRODUCT</span><strong>产品与版本</strong></li><li><span>CONTEXT</span><strong>现象与复现</strong></li><li><span>BOUNDARY</span><strong>普通 / 安全事项</strong></li></ul>
+</div>
+</article>
 </div>
 </section>
 
