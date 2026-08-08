@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 
 const ysereinLogo =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='24' fill='%23142f2c'/%3E%3Crect x='10' y='10' width='76' height='76' rx='19' fill='none' stroke='%2397d7c9' stroke-opacity='.3'/%3E%3Cg fill='%2397d7c9'%3E%3Ccircle cx='29' cy='27' r='5'/%3E%3Ccircle cx='48' cy='27' r='5' opacity='.55'/%3E%3Ccircle cx='67' cy='27' r='5' opacity='.28'/%3E%3Ccircle cx='29' cy='46' r='5' opacity='.45'/%3E%3Ccircle cx='48' cy='46' r='5'/%3E%3Ccircle cx='67' cy='46' r='5' opacity='.5'/%3E%3Ccircle cx='29' cy='65' r='5' opacity='.28'/%3E%3Ccircle cx='48' cy='65' r='5' opacity='.58'/%3E%3Ccircle cx='67' cy='65' r='5'/%3E%3C/g%3E%3Cpath d='M29 77h38' stroke='%23f0b35e' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E";
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='24' fill='%23202124'/%3E%3Crect x='10' y='10' width='76' height='76' rx='19' fill='none' stroke='%23d3d8df' stroke-opacity='.42'/%3E%3Cg fill='%23f3f4f6'%3E%3Ccircle cx='29' cy='27' r='5'/%3E%3Ccircle cx='48' cy='27' r='5' opacity='.72'/%3E%3Ccircle cx='67' cy='27' r='5' opacity='.42'/%3E%3Ccircle cx='29' cy='46' r='5' opacity='.58'/%3E%3Ccircle cx='48' cy='46' r='5'/%3E%3Ccircle cx='67' cy='46' r='5' opacity='.66'/%3E%3Ccircle cx='29' cy='65' r='5' opacity='.42'/%3E%3Ccircle cx='48' cy='65' r='5' opacity='.74'/%3E%3Ccircle cx='67' cy='65' r='5'/%3E%3C/g%3E%3Cpath d='M29 77h38' stroke='%23266df0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E";
 
 const wikiOutDir =
   process.env.YSEREIN_WIKI_OUT_DIR ||
@@ -15,6 +15,7 @@ export default defineConfig({
     "MEMORY.md",
     "README.md",
     "C_context/**/*.md",
+    "designs/**/*.md",
     "products/wiki.md",
     "projects/**/*.md",
     "guide/**/*.md"
@@ -27,7 +28,7 @@ export default defineConfig({
   lastUpdated: true,
   appearance: false,
   head: [
-    ["meta", { name: "theme-color", content: "#e8f1ed" }],
+    ["meta", { name: "theme-color", content: "#ffffff" }],
     ["meta", { name: "color-scheme", content: "light" }],
     ["meta", { name: "application-name", content: "Y-Serein" }],
     ["meta", { property: "og:site_name", content: "Y-Serein" }],

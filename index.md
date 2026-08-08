@@ -1,92 +1,74 @@
 ---
 layout: home
-
-hero:
-  name: "Y-Serein"
-  text: "可靠的产品，<br>面向真实系统。"
-  tagline: "由核心维护者主导，面向无人机厂商、飞控集成商、开发者与学生，提供硬件、固件、桌面软件和可执行文档。"
-  image:
-    src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 420'%3E%3Cdefs%3E%3ClinearGradient id='g' x2='1' y2='1'%3E%3Cstop stop-color='%23eef5f1'/%3E%3Cstop offset='1' stop-color='%23cfdfd8'/%3E%3C/linearGradient%3E%3Cfilter id='s'%3E%3CfeDropShadow dy='18' stdDeviation='16' flood-color='%23193632' flood-opacity='.16'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='640' height='420' rx='30' fill='url(%23g)'/%3E%3Cpath d='M0 84h640M0 336h640M128 0v420M512 0v420' stroke='%232d6159' stroke-opacity='.08'/%3E%3Cg filter='url(%23s)'%3E%3Crect x='138' y='62' width='364' height='296' rx='28' fill='%23f8fcfa' stroke='%232d6159' stroke-opacity='.22'/%3E%3Crect x='177' y='98' width='286' height='224' rx='22' fill='%231a3934'/%3E%3Crect x='205' y='126' width='82' height='70' rx='12' fill='%2396d4c6' opacity='.9'/%3E%3Crect x='303' y='126' width='132' height='26' rx='8' fill='%23fff' opacity='.18'/%3E%3Crect x='303' y='166' width='96' height='18' rx='6' fill='%23fff' opacity='.1'/%3E%3Ccircle cx='221' cy='258' r='10' fill='%23f0b35e'/%3E%3Ccircle cx='257' cy='258' r='10' fill='%2396d4c6'/%3E%3Ccircle cx='293' cy='258' r='10' fill='%2396d4c6' opacity='.45'/%3E%3Cpath d='M343 252h72M343 274h48' stroke='%23fff' stroke-width='8' stroke-linecap='round' opacity='.13'/%3E%3C/g%3E%3Cg fill='none' stroke='%232d6159' stroke-width='4' stroke-linecap='round' opacity='.65'%3E%3Cpath d='M515 166c31 20 31 68 0 88'/%3E%3Cpath d='M538 145c49 34 49 96 0 130'/%3E%3Cpath d='M125 166c-31 20-31 68 0 88'/%3E%3Cpath d='M102 145c-49 34-49 96 0 130'/%3E%3C/g%3E%3Ccircle cx='320' cy='34' r='5' fill='%23f0b35e'/%3E%3C/svg%3E"
-    alt: Y-Serein 硬件与无线系统抽象示意图
-  actions:
-    - theme: brand
-      text: 浏览产品
-      link: /products/
-    - theme: alt
-      text: 获取支持
-      link: /support/
-
-features:
-  - icon: "01"
-    title: SeryRemoteID
-    details: 面向无人机 Remote ID 的硬件与固件产品，连接飞控、身份数据和 WiFi/BLE 广播链路。
-    link: /products/seryremoteid/
-    linkText: 查看产品
-  - icon: "02"
-    title: Serein
-    details: 本地优先的 Markdown 桌面软件，让写作、知识和项目资料保持可控、可迁移。
-    link: /products/serein/
-    linkText: 查看产品
-  - icon: "03"
-    title: YSerein Access
-    details: Windows-first 网络服务。控制面与一次真实公网链路已经验证，持续 24×7 双节点入口仍在建设。
-    link: /products/access
-    linkText: 查看 Access
-  - icon: "04"
-    title: ArduPilot Research
-    details: 面向飞控、实时系统和可靠性研究的上游基线与工程工作区，不冒充独立产品。
-    link: /engineering/ardupilot
-    linkText: 查看工程入口
+title: Y-Serein
+description: Y-Serein 官方产品与公开资源中心：无人机硬件、嵌入式固件、桌面软件、用户文档与工程验证。
 ---
 
-<div class="ys-home-content">
-<section class="ys-proof-strip" aria-label="Y-Serein 产品原则">
+<main class="ys-home-content ys-home-static">
+<a class="ys-home-announcement" href="/docs/">产品、文档与工程验证现已汇入同一条公开路径 <span aria-hidden="true">→</span></a>
+
+<section class="ys-landing-hero">
+<div class="ys-landing-hero-copy">
+<a class="ys-landing-pill" href="/products/"><span>Y-Serein · 官方产品与公开资源中心</span><b aria-hidden="true">›</b></a>
+<h1>把产品、文档与<br class="ys-mobile-title-break">工程证据，<br><span>放进同一条<br class="ys-mobile-title-break">可靠路径。</span></h1>
+<p>面向无人机集成、嵌入式开发和本地知识工作。先判断产品是否适合，再进入快速开始、可信下载、工程验证与正确支持。</p>
+<div class="ys-landing-actions"><a class="ys-action" href="/docs/">进入文档</a><a class="ys-action is-primary" href="/products/">浏览产品</a></div>
+</div>
+
+<div class="ys-landing-product-field">
+<div class="ys-landing-field-grid" aria-hidden="true"></div>
+<figure class="ys-drone-system" aria-label="Y-Serein 无人机系统与公开资源结构示意">
+<header class="ys-drone-stage-head"><span><i aria-hidden="true"></i> Y-SEREIN SYSTEM FIELD</span><strong>UNMANNED AIRCRAFT / PUBLIC SCOPE</strong></header>
+<div class="ys-airspace">
+<svg class="ys-airspace-links" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true"><path d="M220 116L430 214M220 404L430 306M780 116L570 214M780 404L570 306"></path><circle cx="220" cy="116" r="5"></circle><circle cx="220" cy="404" r="5"></circle><circle cx="780" cy="116" r="5"></circle><circle cx="780" cy="404" r="5"></circle><circle cx="430" cy="214" r="4"></circle><circle cx="430" cy="306" r="4"></circle><circle cx="570" cy="214" r="4"></circle><circle cx="570" cy="306" r="4"></circle></svg>
+<article class="ys-airspace-node is-flight"><span>01 / AIRCRAFT</span><strong>飞控与载荷</strong><p>身份、状态与系统输入</p></article>
+<article class="ys-airspace-node is-remote"><span>02 / REMOTE ID</span><strong>SeryRemoteID</strong><p>硬件、固件与飞控集成</p></article>
+<article class="ys-airspace-node is-docs"><span>03 / DOCUMENTATION</span><strong>文档与版本</strong><p>快速开始、升级与校验</p></article>
+<article class="ys-airspace-node is-evidence"><span>04 / EVIDENCE</span><strong>验证与支持</strong><p>矩阵、限制与问题分流</p></article>
+<div class="ys-drone-core">
+<span>Y-SEREIN / UNMANNED SYSTEM</span>
+<svg class="ys-drone-mark" viewBox="0 0 320 210" role="img" aria-label="通用四旋翼无人机俯视结构轮廓"><g class="ys-drone-arms"><path d="M84 55L140 91M236 55L180 91M84 155L140 119M236 155L180 119"></path><circle cx="66" cy="43" r="33"></circle><circle cx="254" cy="43" r="33"></circle><circle cx="66" cy="167" r="33"></circle><circle cx="254" cy="167" r="33"></circle></g><path class="ys-drone-body" d="M147 68H173L188 96V122L173 149H147L132 122V96Z"></path><path class="ys-drone-axis" d="M160 77V140M143 105H177"></path><circle class="ys-drone-center" cx="160" cy="105" r="8"></circle></svg>
+<b>产品 · 文档 · 工程证据</b>
+</div>
+<div class="ys-airspace-status"><span><i aria-hidden="true"></i> PUBLIC MATERIALS</span><b>从系统对象进入可信资源</b><small>Y-SEREIN / 2026</small></div>
+</div>
+<figcaption>无人机系统结构示意；不代表具体机型、飞控、接口或验证结论</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="ys-proof-strip" aria-label="Y-Serein 公开原则">
 <div><span>MAINTAINER-LED</span><strong>核心维护者主导</strong></div>
 <div><span>FIELD-DEPLOYED</span><strong>已有真实硬件用户</strong></div>
 <div><span>DOCUMENTATION-FIRST</span><strong>产品与文档同步交付</strong></div>
 </section>
 
-<section class="ys-home-section ys-flagship-section">
-<div class="ys-section-copy"><span class="ys-eyebrow">FLAGSHIP HARDWARE</span><h2>SeryRemoteID</h2><p>为无人机厂商、飞控集成商、开发者与学生提供 Remote ID 硬件、固件和集成文档。支持 APM、PX4 等飞控生态，具体型号与版本将在兼容性矩阵中持续维护。</p><div class="ys-inline-actions"><a class="ys-action is-primary" href="/products/seryremoteid/">产品概览</a><a class="ys-action" href="/products/seryremoteid/getting-started">快速开始</a><a class="ys-action" href="/downloads/">下载</a></div></div>
-<div class="ys-signal-panel" aria-label="SeryRemoteID 数据链路示意"><div class="ys-signal-node"><span>FLIGHT CONTROLLER</span><strong>APM / PX4</strong></div><i></i><div class="ys-signal-node is-core"><span>SERYREMOTEID</span><strong>IDENTITY + STATE</strong></div><i></i><div class="ys-signal-node"><span>BROADCAST</span><strong>WiFi / BLE</strong></div></div>
+<section class="ys-home-section">
+<header class="ys-split-heading"><div><span class="ys-eyebrow">PRODUCTS & ENGINEERING</span><h2>先识别对象，再进入正确入口。</h2></div><p>三个产品与一个工程入口承担不同职责。成熟度、适用对象与公开材料状态直接展示，不用仓库数量或营销数字替代判断。</p></header>
+<div class="ys-product-list">
+<a href="/products/seryremoteid/"><i>01</i><span><strong>SeryRemoteID</strong><small>FLAGSHIP HARDWARE</small></span><p>连接飞控身份与状态数据，通过 WiFi / BLE 完成 Remote ID 广播的硬件与固件产品。</p><em><b class="is-live">已有真实用户</b><b class="is-pending">资料待补</b></em><u>→</u></a>
+<a href="/products/serein/"><i>02</i><span><strong>Serein</strong><small>DESKTOP SOFTWARE</small></span><p>本地优先的 Markdown 桌面软件，让写作、知识和项目资料保持可控、可迁移。</p><em><b>开发中</b><b class="is-pending">发布材料待补</b></em><u>→</u></a>
+<a href="/products/access"><i>03</i><span><strong>YSerein Access</strong><small>NETWORK SERVICE</small></span><p>Windows-first 网络服务；控制面与一次真实公网链路已经验证，持续入口仍在建设。</p><em><b>建设中</b><b class="is-live">链路已验证</b></em><u>→</u></a>
+<a href="/engineering/ardupilot"><i>04</i><span><strong>ArduPilot Research</strong><small>ENGINEERING BASELINE</small></span><p>飞控上游基线与工程研究工作区，用于可复现实验，不作为独立产品宣传。</p><em><b>工程入口</b><b class="is-pending">验证建设中</b></em><u>→</u></a>
+</div>
 </section>
 
-<section class="ys-home-section ys-workflow-section">
-<aside class="ys-workflow-rail">
-<div class="ys-home-heading"><span>PRODUCT-GRADE RESOURCES</span><h2>产品不止是代码。</h2><p>围绕真实任务组织公开资源：先理解和接入，再取得可验证版本，最后进入对应支持路径。</p></div>
-<ol aria-label="公开资源路径">
-<li><a href="#workflow-docs"><span>01</span>理解与接入</a></li>
-<li><a href="#workflow-releases"><span>02</span>版本与验证</a></li>
-<li><a href="#workflow-support"><span>03</span>支持与反馈</a></li>
-</ol>
-</aside>
-<div class="ys-workflow-stage">
-<article id="workflow-docs" class="ys-workflow-panel">
-<div class="ys-workflow-copy"><span>01 / DOCUMENTATION</span><h3>先完成一次正确接入。</h3><p>从产品选择、快速开始到硬件接线与集成说明，文档按用户要完成的任务展开，而不是照搬仓库目录。</p><a href="/docs/">进入用户文档 <b aria-hidden="true">→</b></a></div>
-<div class="ys-workflow-surface" aria-label="文档路径示意">
-<div class="ys-surface-head"><span>DOCUMENT PATH</span><small>3 STEPS</small></div>
-<ol><li><i>01</i><strong>选择产品</strong><em>确认适用范围</em></li><li><i>02</i><strong>快速开始</strong><em>完成最短闭环</em></li><li><i>03</i><strong>集成与排障</strong><em>进入完整手册</em></li></ol>
+<section class="ys-home-section">
+<header class="ys-split-heading"><div><span class="ys-eyebrow">TASK ROUTE</span><h2>产品、文档、下载和支持是一条路。</h2></div><p>用户不需要理解仓库结构。每个入口回答一个明确问题，并给出可检查的下一步。</p></header>
+<div class="ys-task-path">
+<article><span>01 / START</span><h3>完成第一次正确接入</h3><p>按产品与角色进入快速开始、接线、配置和集成说明。</p><a href="/docs/">进入用户文档 →</a></article>
+<article><span>02 / RELEASE</span><h3>取得可验证的版本</h3><p>版本、适用硬件、SHA-256、升级与回滚条件保持在同一记录。</p><a href="/downloads/">查看版本与下载 →</a></article>
+<article><span>03 / SUPPORT</span><h3>把问题送到正确入口</h3><p>准备产品、版本、复现和日志信息，再区分普通问题与安全事项。</p><a href="/support/">前往支持中心 →</a></article>
 </div>
-</article>
-<article id="workflow-releases" class="ys-workflow-panel">
-<div class="ys-workflow-copy"><span>02 / RELEASES</span><h3>下载必须带着证据。</h3><p>版本、适用硬件、SHA-256、升级路径与已知问题共同构成发布记录；材料未齐全时，页面会明确标注待补。</p><a href="/downloads/">查看版本与下载 <b aria-hidden="true">→</b></a></div>
-<div class="ys-workflow-surface is-release" aria-label="发布记录字段示意">
-<div class="ys-surface-head"><span>RELEASE RECORD</span><small>VERIFIABLE</small></div>
-<dl><div><dt>VERSION</dt><dd>版本号</dd></div><div><dt>HARDWARE</dt><dd>适用硬件</dd></div><div><dt>CHECKSUM</dt><dd>SHA-256</dd></div><div><dt>RECOVERY</dt><dd>升级与回滚</dd></div></dl>
-</div>
-</article>
-<article id="workflow-support" class="ys-workflow-panel">
-<div class="ys-workflow-copy"><span>03 / SUPPORT</span><h3>把问题送到正确入口。</h3><p>普通使用、集成问题与安全事项需要不同的上下文和处理边界。支持页面先帮助用户准备必要信息，再进入对应渠道。</p><a href="/support/">前往支持中心 <b aria-hidden="true">→</b></a></div>
-<div class="ys-workflow-surface is-support" aria-label="支持分流示意">
-<div class="ys-surface-head"><span>SUPPORT ROUTING</span><small>CONTEXT FIRST</small></div>
-<ul><li><span>PRODUCT</span><strong>产品与版本</strong></li><li><span>CONTEXT</span><strong>现象与复现</strong></li><li><span>BOUNDARY</span><strong>普通 / 安全事项</strong></li></ul>
-</div>
-</article>
-</div>
+</section>
+
+<section class="ys-home-section ys-flagship-section">
+<div class="ys-section-copy"><span class="ys-eyebrow">FLAGSHIP HARDWARE</span><h2>SeryRemoteID</h2><p>面向无人机厂商、飞控集成商、开发者、DIY 用户和学生。公开材料只陈述已确认事实；具体硬件版本、接线和无线验证仍需真实资料补齐。</p><div class="ys-inline-actions"><a class="ys-action is-primary" href="/products/seryremoteid/">产品概览</a><a class="ys-action" href="/products/seryremoteid/getting-started">快速开始</a></div></div>
+<dl class="ys-fact-sheet"><div><dt>PRODUCT ROLE</dt><dd>Remote ID 硬件与固件产品</dd></div><div><dt>REPORTED ECOSYSTEM</dt><dd>APM、PX4、凌动 5（准确版本待确认）</dd></div><div><dt>PUBLIC EVIDENCE</dt><dd>完整硬件产品、已有实际用户</dd></div><div><dt>MATERIAL STATUS</dt><dd class="is-pending">型号、接线、发布文件与验证矩阵待补</dd></div></dl>
 </section>
 
 <section class="ys-home-section ys-engineering-section">
-<div class="ys-home-heading"><span>ENGINEERING PRINCIPLES</span><h2>安全、可靠、实时。</h2><p>可信不是宣传词，而是由接口边界、版本管理、验证矩阵、故障恢复和可复现证据共同构成。</p></div>
+<header class="ys-split-heading"><div><span class="ys-eyebrow">ENGINEERING PRINCIPLES</span><h2>安全、可靠、实时。</h2></div><p>这些不是宣传标签，而是由接口边界、版本管理、验证矩阵、故障恢复和可复现证据共同支撑的工程要求。</p></header>
 <div class="ys-principle-grid"><article><strong>安全</strong><p>明确身份、命令、更新和支持渠道的信任边界。</p></article><article><strong>可靠</strong><p>记录兼容性、失败模式、恢复方法和已知限制。</p></article><article><strong>实时</strong><p>关注端到端时限、抖动和资源压力下的系统行为。</p></article></div>
 </section>
-</div>
+</main>
