@@ -2180,6 +2180,12 @@ body:has(.ys-home-static) .VPContent {
   padding-top: 40px;
 }
 
+body:has(.ys-home-static) .VPNavBarMenuLink.active,
+body:has(.ys-home-static) .VPNavBarMenuGroup.active .text {
+  background: transparent;
+  color: var(--ys-ink);
+}
+
 .ys-home-content.ys-home-static {
   width: 100%;
   max-width: none;
@@ -2212,7 +2218,16 @@ body:has(.ys-home-static) .VPContent {
 }
 
 .ys-landing-hero {
+  --product-reframe: 0;
+  --product-satellites: 0;
+  --ys-motion-nav-bottom: 110px;
+  --ys-motion-reference-top: 74px;
+  --ys-motion-copy-height: clamp(360px, 46vh, 414px);
+  --ys-motion-sticky-height: max(calc(100svh - var(--ys-motion-nav-bottom)), 610px);
+  --ys-motion-tail: max(0px, calc(var(--ys-motion-reference-top) - var(--ys-motion-nav-bottom) + var(--ys-motion-copy-height) - 80px + min(669px, 34.61vw) - var(--ys-motion-sticky-height) + 16px));
   position: relative;
+  padding-bottom: var(--ys-motion-tail);
+  overflow: clip;
   border-bottom: 1px solid var(--ys-line);
   background: var(--ys-paper-strong);
 }
@@ -2255,17 +2270,18 @@ body:has(.ys-home-static) .VPContent {
 }
 
 .ys-landing-hero-copy h1 {
-  max-width: 980px;
-  margin: 39px 0 0;
+  max-width: 720px;
+  margin: 28px 0 0;
   color: var(--ys-ink);
-  font-size: clamp(54px, 4.55vw, 66px);
+  font-size: clamp(42px, 3.5vw, 46px);
   font-weight: 600;
-  letter-spacing: -0.012em;
-  line-height: 1.02;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
 }
 
 .ys-landing-hero-copy h1 span {
-  color: var(--ys-ink);
+  color: #626a75;
+  font-weight: 520;
 }
 
 .ys-mobile-title-break {
@@ -2273,12 +2289,13 @@ body:has(.ys-home-static) .VPContent {
 }
 
 .ys-landing-hero-copy > p {
-  width: min(690px, 100%);
-  margin: 30px 0 0;
-  color: var(--ys-ink-2);
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 1.72;
+  width: min(620px, 100%);
+  margin: 24px 0 0;
+  color: var(--ys-ink-3);
+  font-size: 16px;
+  font-weight: 450;
+  letter-spacing: -0.009em;
+  line-height: 1.5;
 }
 
 .ys-landing-actions {
@@ -2712,7 +2729,7 @@ body:has(.ys-home-static) .VPContent {
   }
 
   .ys-landing-hero-copy h1 {
-    font-size: clamp(48px, 7vw, 60px);
+    font-size: 42px;
   }
 
   .ys-resource-window {
@@ -2766,9 +2783,9 @@ body:has(.ys-home-static) .VPContent {
 
   .ys-landing-hero-copy h1 {
     max-width: 470px;
-    margin-top: 30px;
-    font-size: clamp(40px, 11.2vw, 48px);
-    line-height: 1.08;
+    margin-top: 22px;
+    font-size: 36px;
+    line-height: 1.06;
   }
 
   .ys-mobile-title-break {
@@ -2777,8 +2794,8 @@ body:has(.ys-home-static) .VPContent {
 
   .ys-landing-hero-copy > p {
     margin-top: 24px;
-    font-size: 15px;
-    line-height: 1.72;
+    font-size: 16px;
+    line-height: 1.58;
   }
 
   .ys-landing-actions {
@@ -2936,7 +2953,7 @@ body:has(.ys-home-static) .VPContent {
   width: min(1120px, 78vw);
   aspect-ratio: 1.76;
   margin: 0 auto;
-  grid-template-rows: 50px minmax(0, 1fr) 34px;
+  grid-template-rows: 48px minmax(0, 1fr) 32px;
   overflow: hidden;
   border: 1px solid var(--ys-line-strong);
   border-radius: 15px;
@@ -2945,37 +2962,208 @@ body:has(.ys-home-static) .VPContent {
 }
 
 .ys-drone-stage-head {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 18px;
+  padding: 0 12px;
+  grid-template-columns: 170px minmax(0, 1fr) auto;
+  gap: 10px;
   border-bottom: 1px solid var(--ys-line);
-  background: color-mix(in oklab, var(--ys-paper-strong) 96%, transparent);
-  color: var(--ys-ink-3);
-  font-family: var(--ys-font-mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  line-height: 1;
+  background: var(--ys-white);
 }
 
-.ys-drone-stage-head span {
+.ys-stage-traffic {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: var(--ys-accent-strong);
+  gap: 6px;
 }
 
-.ys-drone-stage-head i,
+.ys-stage-traffic i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #b7bdc5;
+  border-radius: 50%;
+}
+
+.ys-stage-project {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 7px;
+}
+
+.ys-stage-project > b,
+.ys-system-rail-brand > b {
+  display: grid;
+  place-items: center;
+  color: var(--ys-ink);
+  background: var(--ys-accent-soft);
+  border: 1px solid color-mix(in oklab, var(--ys-accent) 20%, var(--ys-line));
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.ys-stage-project > b {
+  width: 24px;
+  height: 24px;
+}
+
+.ys-stage-project strong {
+  overflow: hidden;
+  color: var(--ys-ink);
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ys-stage-project > i,
 .ys-airspace-status i {
   width: 6px;
   height: 6px;
+  flex: 0 0 auto;
   border-radius: 50%;
+  background: var(--ys-success);
+}
+
+.ys-stage-project small {
+  color: var(--ys-ink-3);
+  font-size: 9px;
+}
+
+.ys-stage-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ys-stage-actions span,
+.ys-stage-actions b {
+  display: grid;
+  min-height: 28px;
+  place-items: center;
+  padding: 0 9px;
+  border: 1px solid var(--ys-line);
+  border-radius: 7px;
+  background: var(--ys-white);
+  color: var(--ys-ink-2);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.ys-stage-actions b {
+  border-color: var(--ys-ink);
+  background: var(--ys-ink);
+  color: var(--ys-white);
+  font-family: var(--ys-font-mono);
+  letter-spacing: 0.05em;
+}
+
+.ys-drone-stage-body {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: 176px minmax(0, 1fr);
+}
+
+.ys-system-rail {
+  min-width: 0;
+  padding: 15px 10px 12px;
+  border-right: 1px solid var(--ys-line);
+  background: var(--attio-white-200);
+}
+
+.ys-system-rail-brand {
+  display: grid;
+  padding: 0 4px 17px;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 7px;
+}
+
+.ys-system-rail-brand > b {
+  width: 24px;
+  height: 24px;
+}
+
+.ys-system-rail-brand strong {
+  color: var(--ys-ink);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.ys-system-rail-brand small {
+  color: var(--ys-ink-3);
+  font-family: var(--ys-font-mono);
+  font-size: 8px;
+}
+
+.ys-system-rail > p {
+  margin: 4px 8px 9px;
+  color: var(--ys-ink-3);
+  font-family: var(--ys-font-mono);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.ys-system-rail ol {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+  list-style: none;
+}
+
+.ys-system-rail li {
+  display: grid;
+  min-height: 48px;
+  padding: 7px 8px;
+  grid-template-columns: 20px 8px 1fr;
+  grid-template-rows: 18px 15px;
+  align-items: center;
+  border-radius: 7px;
+  color: var(--ys-ink-2);
+}
+
+.ys-system-rail li.is-active {
+  background: var(--ys-accent-soft);
+}
+
+.ys-system-rail li > span {
+  grid-row: 1 / 3;
+  color: var(--ys-ink-3);
+  font-family: var(--ys-font-mono);
+  font-size: 8px;
+}
+
+.ys-system-rail li > i {
+  width: 5px;
+  height: 5px;
+  grid-row: 1 / 3;
+  border-radius: 50%;
+  background: var(--ys-line-strong);
+}
+
+.ys-system-rail li.is-active > i {
   background: var(--ys-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--ys-accent) 12%, transparent);
+}
+
+.ys-system-rail li > b {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.ys-system-rail li > small {
+  grid-column: 3;
+  color: var(--ys-ink-3);
+  font-size: 8px;
 }
 
 .ys-airspace {
   position: relative;
+  min-width: 0;
   min-height: 0;
   overflow: hidden;
   background:
@@ -3272,7 +3460,8 @@ body:has(.ys-home-static) .VPContent {
     font-size: 10px;
   }
 
-  .ys-drone-stage-head strong,
+  .ys-stage-project small,
+  .ys-stage-actions span,
   .ys-airspace-links,
   .ys-airspace-status {
     display: none;
@@ -3375,5 +3564,643 @@ body:has(.ys-home-static) .VPContent {
   .ys-drone-system,
   .ys-airspace-node {
     border: 1px solid CanvasText;
+  }
+}
+
+/* Homepage motion owners: the rest of the documentation site stays static. */
+.ys-landing-pill {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  height: 30px;
+  min-height: 30px;
+  padding: 0;
+  overflow: visible;
+  border: 1px solid var(--ys-line);
+  background: transparent;
+}
+
+.ys-landing-pill-beam {
+  position: absolute;
+  z-index: 0;
+  inset: -1px;
+  border-radius: 13px;
+  background: conic-gradient(from var(--beam-angle, -80deg) at var(--beam-x, 50%) var(--beam-y, 50%) in oklch, rgba(163, 236, 233, 0), #a3ece9 20deg, #709ff5 100deg, rgba(112, 159, 245, 0) 120deg);
+  filter: drop-shadow(0 0 1.5px rgba(112, 159, 245, 0.22));
+  pointer-events: none;
+}
+
+@media (max-resolution: .87dppx) {
+  .ys-landing-pill-beam {
+    bottom: -2px;
+  }
+}
+
+.ys-landing-pill-surface {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 28px;
+  padding: 0 8px 0 10px;
+  align-items: center;
+  gap: 5px;
+  border-radius: 12px;
+  background: var(--ys-white);
+  white-space: nowrap;
+}
+
+.ys-landing-pill:hover .ys-landing-pill-surface,
+.ys-landing-pill:focus-visible .ys-landing-pill-surface {
+  background: var(--attio-white-300);
+}
+
+.ys-landing-field-grid {
+  background: linear-gradient(180deg, var(--ys-white) 0 32%, #f7f9ff 52%, #e8efff 100%);
+}
+
+.ys-landing-field-grid::after {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0 7px, rgba(78, 103, 153, 0.045) 8px);
+  content: "";
+  mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
+  opacity: calc(var(--product-satellites) * 0.35);
+  pointer-events: none;
+}
+
+.ys-landing-product-field {
+  position: relative;
+  height: calc(100svh + 98px);
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.ys-product-motion-sticky {
+  position: sticky;
+  z-index: 1;
+  top: var(--ys-motion-nav-bottom);
+  display: block;
+  height: var(--ys-motion-sticky-height);
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.ys-product-motion-sticky > .ys-landing-hero-copy {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--ys-motion-reference-top) - var(--ys-motion-nav-bottom));
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: var(--ys-motion-copy-height);
+  min-height: 0;
+  padding: 42px 24px 0;
+}
+
+.ys-drone-system {
+  position: absolute;
+  top: calc(var(--ys-motion-reference-top) - var(--ys-motion-nav-bottom) + var(--ys-motion-copy-height));
+  left: 50%;
+  width: min(1440px, 74.5vw);
+  margin: 0;
+  border-radius: calc(16px - var(--product-reframe) * 5px);
+  box-shadow: 0 24px 58px rgba(31, 43, 62, 0.11);
+  transform: translate3d(-50%, calc(var(--product-reframe) * -80px), 0) scale(calc(.988 - var(--product-reframe) * .353));
+  transform-origin: center center;
+}
+
+.ys-landing-hero[data-motion-state="playing"] .ys-drone-system {
+  will-change: transform;
+  transition: transform 900ms cubic-bezier(0.2, 0.74, 0.18, 1), border-radius 900ms cubic-bezier(0.2, 0.74, 0.18, 1), box-shadow 900ms cubic-bezier(0.2, 0.74, 0.18, 1) !important;
+}
+
+.ys-landing-hero[data-motion-state="playing"] .ys-landing-hero-copy {
+  pointer-events: none;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate3d(0, -54px, 0);
+  transition: opacity 280ms ease-out, transform 330ms cubic-bezier(.2, .72, .18, 1), filter 260ms ease-out !important;
+}
+
+.ys-landing-hero[data-motion-state="settled"] .ys-landing-hero-copy {
+  pointer-events: none;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate3d(0, -54px, 0);
+}
+
+.ys-landing-hero[data-motion-mode="compact"] .ys-landing-hero-copy,
+.ys-landing-hero[data-motion-mode="reduced"] .ys-landing-hero-copy {
+  pointer-events: auto;
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+.ys-product-satellites {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ys-product-satellite {
+  position: absolute;
+  width: 168px;
+  padding: 13px;
+  border: 1px solid var(--ys-line-strong);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--ys-ink);
+  box-shadow: 0 16px 38px rgba(30, 42, 61, 0.1);
+  opacity: var(--product-satellites);
+}
+
+.ys-product-satellite > span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--ys-ink-3);
+  font-family: var(--ys-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.ys-product-satellite p {
+  margin: 7px 0 0;
+  color: var(--ys-ink-2);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.ys-product-satellite strong {
+  font-size: 11px;
+}
+
+.ys-product-satellite.is-boundary {
+  top: 286px;
+  left: calc(50% - 590px);
+  width: 160px;
+  min-height: 116px;
+  transform: translate3d(calc((1 - var(--product-satellites)) * -70px), calc((1 - var(--product-satellites)) * -20px), 0);
+}
+
+.ys-product-satellite.is-evidence {
+  bottom: 12px;
+  left: calc(50% - 600px);
+  display: grid;
+  width: 176px;
+  min-height: 194px;
+  align-content: start;
+  gap: 9px;
+  border-color: #242a32;
+  background: #11151a;
+  color: #d6dce4;
+  transform: translate3d(calc((1 - var(--product-satellites)) * -60px), calc((1 - var(--product-satellites)) * 50px), 0);
+}
+
+.ys-product-satellite.is-evidence code {
+  padding: 5px 6px;
+  border-radius: 3px;
+  background: #1b2027;
+  color: inherit;
+  font: 10px/1 var(--ys-font-mono);
+}
+
+.ys-product-satellite.is-evidence strong {
+  margin-top: 5px;
+  color: #69d4a8;
+}
+
+.ys-product-satellite.is-route {
+  top: 366px;
+  right: calc(50% - 600px);
+  width: 164px;
+  min-height: 216px;
+  transform: translate3d(calc((1 - var(--product-satellites)) * 78px), calc((1 - var(--product-satellites)) * 8px), 0);
+}
+
+.ys-product-satellite.is-route > div {
+  position: relative;
+  height: 82px;
+  overflow: hidden;
+  border: 1px solid var(--ys-line);
+  background: var(--ys-paper);
+}
+
+.ys-product-satellite.is-route > div i {
+  position: absolute;
+  border: 1px solid var(--ys-line-strong);
+  background: var(--ys-white);
+}
+
+.ys-product-satellite.is-route > div i:first-child {
+  inset: 9px 9px 9px 38px;
+}
+
+.ys-product-satellite.is-route > div i:nth-child(2) {
+  top: 9px;
+  bottom: 9px;
+  left: 9px;
+  width: 23px;
+}
+
+.ys-product-satellite.is-route > div i:last-child {
+  right: 16px;
+  bottom: 17px;
+  width: 54px;
+  height: 18px;
+  background: var(--ys-ink);
+}
+
+.ys-product-satellite.is-route p b,
+.ys-product-satellite.is-route p small {
+  display: block;
+}
+
+.ys-product-satellite.is-route p small {
+  margin-top: 4px;
+  color: var(--ys-ink-3);
+  font-size: 10px;
+}
+
+.ys-landing-hero[data-motion-state="playing"] .ys-product-satellite {
+  will-change: transform, opacity;
+  transition-property: transform, opacity !important;
+  transition-duration: 430ms, 350ms !important;
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1), cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.ys-landing-hero[data-motion-state="playing"] .ys-product-satellite.is-boundary {
+  transition-delay: 90ms !important;
+}
+
+.ys-landing-hero[data-motion-state="playing"] .ys-product-satellite.is-evidence {
+  transition-delay: 290ms !important;
+}
+
+.ys-landing-hero[data-motion-state="playing"] .ys-product-satellite.is-route {
+  transition-delay: 490ms !important;
+}
+
+.ys-signal-story {
+  --signal-progress: 0;
+  position: relative;
+  min-height: 820px;
+  margin-top: 112px;
+  border-block: 1px solid #22262c;
+  background: #0b0d0f;
+  color: #f5f6f7;
+}
+
+.ys-signal-inner {
+  display: grid;
+  width: min(calc(100% - 48px), 1376px);
+  height: 820px;
+  min-height: 820px;
+  margin: auto;
+  grid-template-columns: 1fr 1.16fr;
+  border-inline: 1px solid rgba(173, 184, 197, 0.16);
+}
+
+.ys-signal-copy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  padding: 62px 56px;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(173, 184, 197, 0.16);
+}
+
+.ys-signal-kicker {
+  margin: 0;
+  color: #7f8995;
+  font-family: var(--ys-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.ys-signal-copy h2 {
+  max-width: 540px;
+  margin: 16px 0 0;
+  color: #f5f6f7;
+  font-size: clamp(34px, 3vw, 43px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.ys-signal-copy h2 span {
+  color: #8f98a4;
+  font-weight: 500;
+}
+
+.ys-signal-copy > a {
+  width: max-content;
+  min-height: 44px;
+  margin-top: 25px;
+  padding: 12px 0;
+  border-bottom: 1px solid #373c43;
+  color: #d8dce1 !important;
+  font-size: 12px;
+  text-decoration: none !important;
+}
+
+.ys-signal-tabs {
+  margin-top: 92px;
+}
+
+.ys-signal-tabs button {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 65px;
+  padding: 14px 0;
+  border: 0;
+  border-top: 1px solid rgba(173, 184, 197, 0.16);
+  background: transparent;
+  color: #69727e;
+  text-align: left;
+  cursor: pointer;
+}
+
+.vp-doc .ys-signal-tabs strong {
+  display: block;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ys-signal-tabs p {
+  display: none;
+  max-width: 440px;
+  margin: 7px 0 0;
+  color: #8d96a1;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.ys-signal-tabs button > i {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: #929ba6;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.ys-signal-tabs button.is-active {
+  color: #f3f5f7;
+}
+
+.ys-signal-tabs button.is-active p {
+  display: block;
+}
+
+.ys-signal-tabs button.is-active > i {
+  transform: scaleX(var(--signal-progress));
+}
+
+.ys-signal-story[data-motion-mode="static"] .ys-signal-tabs button.is-active > i {
+  transform: scaleX(1);
+}
+
+.ys-signal-canvas-wrap {
+  position: relative;
+  min-width: 0;
+  height: 820px;
+  overflow: hidden;
+}
+
+.ys-signal-canvas-wrap::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: radial-gradient(circle at 53% 53%, rgba(50, 59, 70, 0.24), rgba(25, 30, 36, 0.08) 36%, transparent 62%);
+  content: "";
+  pointer-events: none;
+}
+
+.ys-signal-canvas-wrap canvas {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1180px) {
+  .ys-drone-system {
+    width: 76vw;
+  }
+
+  .ys-product-satellite {
+    width: 138px;
+    padding: 11px;
+  }
+
+  .ys-product-satellite.is-boundary {
+    left: 12px;
+  }
+
+  .ys-product-satellite.is-evidence {
+    left: 16px;
+  }
+
+  .ys-product-satellite.is-route {
+    right: 12px;
+  }
+
+  .ys-drone-stage-body {
+    grid-template-columns: 132px minmax(0, 1fr);
+  }
+
+  .ys-system-rail {
+    display: block;
+    padding: 11px 7px 9px;
+  }
+
+  .ys-system-rail-brand {
+    padding: 0 3px 12px;
+    grid-template-columns: 22px 1fr;
+    gap: 6px;
+  }
+
+  .ys-system-rail-brand > b {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ys-system-rail-brand small,
+  .ys-system-rail li > small {
+    display: none;
+  }
+
+  .ys-system-rail li {
+    min-height: 39px;
+    padding: 5px 6px;
+    grid-template-columns: 17px 7px 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .ys-system-rail li > span,
+  .ys-system-rail li > i {
+    grid-row: 1;
+  }
+
+  .ys-airspace-node {
+    width: 132px;
+    min-height: 74px;
+    padding: 10px 11px;
+  }
+
+  .ys-airspace-node.is-flight,
+  .ys-airspace-node.is-remote {
+    left: 18px;
+  }
+
+  .ys-airspace-node.is-docs,
+  .ys-airspace-node.is-evidence {
+    right: 18px;
+  }
+
+  .ys-drone-core {
+    width: 226px;
+    height: 262px;
+  }
+
+  .ys-drone-core::before {
+    width: 202px;
+    height: 202px;
+  }
+
+  .ys-drone-mark {
+    width: 205px;
+  }
+
+  .ys-airspace-status {
+    right: 150px;
+    left: 150px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .ys-home-content.ys-home-static {
+    width: 100% !important;
+    margin-inline: 0;
+  }
+
+  .ys-landing-hero {
+    padding-bottom: 0;
+  }
+
+  .ys-landing-pill-beam {
+    bottom: -2px;
+  }
+
+  .ys-landing-product-field {
+    height: auto;
+    min-height: 570px;
+    padding: 8px 18px 62px;
+  }
+
+  .ys-product-motion-sticky {
+    position: relative;
+    top: auto;
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .ys-product-motion-sticky > .ys-landing-hero-copy {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 58px 20px 38px;
+  }
+
+  .ys-product-satellites {
+    display: none;
+  }
+
+  .ys-drone-system {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .ys-drone-stage-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ys-system-rail {
+    display: none;
+  }
+
+  .ys-stage-traffic {
+    display: none;
+  }
+
+  .ys-drone-stage-head {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .ys-signal-story {
+    min-height: 0;
+    margin-top: 72px;
+  }
+
+  .ys-signal-inner {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    border: 0;
+  }
+
+  .ys-signal-copy {
+    padding: 76px 18px 24px;
+    border: 0;
+  }
+
+  .ys-signal-copy h2 {
+    font-size: 32px;
+  }
+
+  .ys-signal-tabs {
+    order: 3;
+    margin-top: 430px;
+  }
+
+  .ys-signal-canvas-wrap {
+    position: absolute;
+    top: 250px;
+    right: 0;
+    left: 0;
+    height: 390px;
+  }
+}
+
+@media (forced-colors: active) {
+  .ys-product-satellite,
+  .ys-signal-tabs button {
+    border-color: CanvasText;
   }
 }

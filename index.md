@@ -7,18 +7,38 @@ description: Y-Serein 官方产品与公开资源中心：无人机硬件、嵌�
 <main class="ys-home-content ys-home-static">
 <a class="ys-home-announcement" href="/docs/">产品、文档与工程验证现已汇入同一条公开路径 <span aria-hidden="true">→</span></a>
 
-<section class="ys-landing-hero">
+<section class="ys-landing-hero" data-product-motion data-motion-mode="position-trigger" data-motion-state="armed" data-motion-run="0">
+<div class="ys-landing-product-field">
+<div class="ys-landing-field-grid" aria-hidden="true"></div>
+<div class="ys-product-motion-sticky">
 <div class="ys-landing-hero-copy">
-<a class="ys-landing-pill" href="/products/"><span>Y-Serein · 官方产品与公开资源中心</span><b aria-hidden="true">›</b></a>
+<a class="ys-landing-pill" href="/products/" data-motion-pill data-pill-active="false" data-beam-phase="0" data-beam-segment="top"><span class="ys-landing-pill-beam" aria-hidden="true"></span><span class="ys-landing-pill-surface"><span>Y-Serein · 官方产品与公开资源中心</span><b aria-hidden="true">›</b></span></a>
 <h1>把产品、文档与<br class="ys-mobile-title-break">工程证据，<br><span>放进同一条<br class="ys-mobile-title-break">可靠路径。</span></h1>
 <p>面向无人机集成、嵌入式开发和本地知识工作。先判断产品是否适合，再进入快速开始、可信下载、工程验证与正确支持。</p>
 <div class="ys-landing-actions"><a class="ys-action" href="/docs/">进入文档</a><a class="ys-action is-primary" href="/products/">浏览产品</a></div>
 </div>
-
-<div class="ys-landing-product-field">
-<div class="ys-landing-field-grid" aria-hidden="true"></div>
+<div class="ys-product-satellites" aria-hidden="true">
+<article class="ys-product-satellite is-boundary"><span>PUBLIC BOUNDARY</span><strong>公开边界清楚</strong><p>已确认、待验证与待补材料分层呈现。</p></article>
+<article class="ys-product-satellite is-evidence"><span>EVIDENCE</span><code>documentation</code><code>release checksum</code><code>field verification</code><strong>证据可追溯</strong></article>
+<article class="ys-product-satellite is-route"><span>RESOURCE ROUTE</span><div aria-hidden="true"><i></i><i></i><i></i></div><p><b>产品 → 文档</b><small>下载 → 验证 → 支持</small></p></article>
+</div>
 <figure class="ys-drone-system" aria-label="Y-Serein 无人机系统与公开资源结构示意">
-<header class="ys-drone-stage-head"><span><i aria-hidden="true"></i> Y-SEREIN SYSTEM FIELD</span><strong>UNMANNED AIRCRAFT / PUBLIC SCOPE</strong></header>
+<header class="ys-drone-stage-head">
+<span class="ys-stage-traffic" aria-hidden="true"><i></i><i></i><i></i></span>
+<div class="ys-stage-project"><b>Y</b><strong>Y-Serein System</strong><i aria-hidden="true"></i><small>公开资源中心</small></div>
+<div class="ys-stage-actions"><span>无人机系统</span><b>PUBLIC</b></div>
+</header>
+<div class="ys-drone-stage-body">
+<aside class="ys-system-rail" aria-label="Y-Serein 公开资源优先级">
+<div class="ys-system-rail-brand"><b>Y</b><strong>系统对象</strong><small>2026</small></div>
+<p>PUBLIC ROUTE</p>
+<ol>
+<li class="is-active"><span>01</span><i aria-hidden="true"></i><b>产品</b><small>SeryRemoteID</small></li>
+<li><span>02</span><i aria-hidden="true"></i><b>文档</b><small>快速开始</small></li>
+<li><span>03</span><i aria-hidden="true"></i><b>版本</b><small>下载与校验</small></li>
+<li><span>04</span><i aria-hidden="true"></i><b>证据</b><small>验证与支持</small></li>
+</ol>
+</aside>
 <div class="ys-airspace">
 <svg class="ys-airspace-links" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true"><path d="M220 116L430 214M220 404L430 306M780 116L570 214M780 404L570 306"></path><circle cx="220" cy="116" r="5"></circle><circle cx="220" cy="404" r="5"></circle><circle cx="780" cy="116" r="5"></circle><circle cx="780" cy="404" r="5"></circle><circle cx="430" cy="214" r="4"></circle><circle cx="430" cy="306" r="4"></circle><circle cx="570" cy="214" r="4"></circle><circle cx="570" cy="306" r="4"></circle></svg>
 <article class="ys-airspace-node is-flight"><span>01 / AIRCRAFT</span><strong>飞控与载荷</strong><p>身份、状态与系统输入</p></article>
@@ -32,8 +52,10 @@ description: Y-Serein 官方产品与公开资源中心：无人机硬件、嵌�
 </div>
 <div class="ys-airspace-status"><span><i aria-hidden="true"></i> PUBLIC MATERIALS</span><b>从系统对象进入可信资源</b><small>Y-SEREIN / 2026</small></div>
 </div>
+</div>
 <figcaption>无人机系统结构示意；不代表具体机型、飞控、接口或验证结论</figcaption>
 </figure>
+</div>
 </div>
 </section>
 
@@ -71,4 +93,6 @@ description: Y-Serein 官方产品与公开资源中心：无人机硬件、嵌�
 <header class="ys-split-heading"><div><span class="ys-eyebrow">ENGINEERING PRINCIPLES</span><h2>安全、可靠、实时。</h2></div><p>这些不是宣传标签，而是由接口边界、版本管理、验证矩阵、故障恢复和可复现证据共同支撑的工程要求。</p></header>
 <div class="ys-principle-grid"><article><strong>安全</strong><p>明确身份、命令、更新和支持渠道的信任边界。</p></article><article><strong>可靠</strong><p>记录兼容性、失败模式、恢复方法和已知限制。</p></article><article><strong>实时</strong><p>关注端到端时限、抖动和资源压力下的系统行为。</p></article></div>
 </section>
+
+<HomeMotion />
 </main>

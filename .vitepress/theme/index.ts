@@ -1,11 +1,13 @@
 import DefaultTheme from "vitepress/theme";
 import type { Theme } from "vitepress";
+import HomeMotion from "./HomeMotion.vue";
 import "./portal.css";
 
 const theme: Theme = {
   ...DefaultTheme,
   enhanceApp(context) {
     DefaultTheme.enhanceApp?.(context);
+    context.app.component("HomeMotion", HomeMotion);
 
     if (typeof window === "undefined") return;
 
