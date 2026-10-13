@@ -1,51 +1,19 @@
 ---
-title: Serein 版本与发布
-description: Windows 安装包、系统要求、校验值、升级、迁移和已知问题。
+title: Serein 版本说明
+description: 当前安装器、历史公开版本与系统要求。
 ---
 
-# 版本与发布
 
-::: warning 正式发布资料待补
-仓库 README 说明 Windows 打包验证完成后才发布下载。当前页面不应提供未经验证的安装包。
-:::
+# 版本与安装
 
-## 发布模板
+## Serein 1.0.4
 
-### `vX.Y.Z` — YYYY-MM-DD
+Windows x64 安装器。产品文档介绍本地 Markdown、Vault、源码与富编辑、公式与文档导出，以及思维导图/XMind 工作流。具体功能以安装版本界面为准。
 
-| 字段 | 内容 |
-|---|---|
-| 发布等级 | Preview / Beta / Stable |
-| Windows 版本 | 待补 |
-| WebView2 要求 | 待补 |
-| 下载 | 待补 |
-| SHA-256 | 待补 |
-| 配置迁移 | 待补 |
-| 数据格式变化 | 待补 |
+[核对当前版本文件与获取方式](/downloads/#serein)。公开 Release 目前另保留 [v0.0.4](https://github.com/Y-Serein/Serein/releases/tag/v0.0.4)，它不是 1.0.4，使用时应按旧版实际能力判断。
 
-#### 新增
+## 系统与升级
 
-- 待补。
+当前交付面向 Windows x64，并使用 Microsoft Edge WebView2。升级前保存草稿并备份 Vault；新安装器的文件版本与校验值须对应。Linux/macOS 源码构建不代表已有同等可下载成品。
 
-#### 修复
-
-- 待补。
-
-#### 已知问题
-
-- Windows release、中文 IME、WebView2、文件关联和大文档性能验证结果待补。
-
-## Windows 构建
-
-仓库提供：
-
-```powershell
-.\scripts\build_windows.ps1
-```
-
-Windows 发布必须在 Windows 环境完成。不要对由 WSL/Linux 创建的 `node_modules` 使用 `-SkipInstall`。
-
-## 发布入口
-
-- [GitHub Releases](https://github.com/Y-Serein/Serein/releases)
-- [下载中心](/downloads/)
+数学、DOCX 和导图输出分别说明格式边界。更新后先用文档副本检查编辑、保存与常用导出，再处理重要原件。

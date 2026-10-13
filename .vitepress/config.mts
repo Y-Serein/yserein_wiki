@@ -14,24 +14,32 @@ export default defineConfig({
     "HANDOFF.md",
     "MEMORY.md",
     "README.md",
+    "docs/PRODUCT_ITERATION_LOG.md",
+    "docs/DESIGN_SYSTEM.md",
     "C_context/**/*.md",
     "designs/**/*.md",
     "products/wiki.md",
+    "products/access.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/design/**/*.md",
+    "docs/release/**/*.md",
+    "docs/runbooks/**/*.md",
     "projects/**/*.md",
     "guide/**/*.md"
   ],
   lang: "zh-CN",
-  title: "Y-Serein",
+  title: "YSerein",
   description:
-    "Y-Serein 产品与公开资源中心：无人机硬件、嵌入式固件、桌面软件、用户文档与工程验证。",
+    "YSerein 产品、用户文档与下载：Swarm 无人机地面站、Scope 调试仪器与 Serein 本地写作。",
   cleanUrls: true,
   lastUpdated: true,
   appearance: false,
   head: [
-    ["meta", { name: "theme-color", content: "#ffffff" }],
+    ["meta", { name: "theme-color", content: "#fbfaf7" }],
     ["meta", { name: "color-scheme", content: "light" }],
-    ["meta", { name: "application-name", content: "Y-Serein" }],
-    ["meta", { property: "og:site_name", content: "Y-Serein" }],
+    ["meta", { name: "application-name", content: "YSerein" }],
+    ["meta", { property: "og:site_name", content: "YSerein" }],
     ["link", { rel: "icon", type: "image/svg+xml", href: ysereinLogo }]
   ],
   markdown: {
@@ -39,30 +47,12 @@ export default defineConfig({
   },
   themeConfig: {
     logo: ysereinLogo,
-    siteTitle: "Y-Serein",
+    siteTitle: "YSerein",
     nav: [
-      { text: "首页", link: "/" },
-      {
-        text: "产品",
-        items: [
-          { text: "产品总览", link: "/products/" },
-          { text: "YSerein Access", link: "/products/access" },
-          { text: "SeryRemoteID", link: "/products/seryremoteid/" },
-          { text: "Serein", link: "/products/serein/" }
-        ]
-      },
-      { text: "文档", link: "/docs/" },
-      { text: "下载", link: "/downloads/" },
-      {
-        text: "研究与工程",
-        items: [
-          { text: "工程总览", link: "/engineering/" },
-          { text: "ArduPilot Research", link: "/engineering/ardupilot" },
-          { text: "研究方向", link: "/research/" }
-        ]
-      },
-      { text: "支持", link: "/support/" },
-      { text: "关于", link: "/about/" }
+      { text: "产品", items: [{ text: "YSerein Swarm", link: "/products/swarm/" }, { text: "Serein Scope", link: "/products/scope/" }, { text: "Serein", link: "/products/serein/" }, { text: "SeryRemoteID", link: "/products/seryremoteid/" }, { text: "全部产品", link: "/products/" }] },
+      { text: "文档", link: "/docs/" }, { text: "下载", link: "/downloads/" },
+      { text: "更新", link: "/updates/" }, { text: "支持", link: "/support/" },
+      { text: "Cloud", link: "https://cloud.yserein.com/#console" }
     ],
     sidebar: {
       "/products/seryremoteid/": [
@@ -125,26 +115,176 @@ export default defineConfig({
           ]
         }
       ],
+      "/products/swarm/": [
+  {
+    "text": "开始使用",
+    "items": [
+      {
+        "text": "产品概览",
+        "link": "/products/swarm/"
+      },
+      {
+        "text": "快速开始",
+        "link": "/products/swarm/getting-started"
+      },
+      {
+        "text": "完整手册",
+        "link": "/products/swarm/user-guide"
+      }
+    ]
+  },
+  {
+    "text": "操作与连接",
+    "items": [
+      {
+        "text": "网络与模拟联调",
+        "link": "/products/swarm/connection"
+      },
+      {
+        "text": "设备操作与维护",
+        "link": "/products/swarm/device-operations"
+      },
+      {
+        "text": "表演准备与执行",
+        "link": "/products/swarm/workflow"
+      },
+      {
+        "text": "应急处理",
+        "link": "/products/swarm/emergency"
+      },
+      {
+        "text": "排障与收尾",
+        "link": "/products/swarm/troubleshooting"
+      },
+      {
+        "text": "版本与范围",
+        "link": "/products/swarm/release-notes"
+      }
+    ]
+  }
+],
+      "/products/scope/": [
+  {
+    "text": "Serein Scope",
+    "items": [
+      {
+        "text": "产品概览",
+        "link": "/products/scope/"
+      },
+      {
+        "text": "快速开始",
+        "link": "/products/scope/getting-started"
+      },
+      {
+        "text": "用户手册",
+        "link": "/products/scope/user-guide"
+      },
+      {
+        "text": "组件库",
+        "link": "/products/scope/components"
+      },
+      {
+        "text": "Swarm 模拟组件",
+        "link": "/products/scope/swarm-simulator/"
+      },
+      {
+        "text": "常见问题",
+        "link": "/products/scope/faq"
+      },
+      {
+        "text": "Core SDK",
+        "link": "/products/scope/sdk"
+      },
+      {
+        "text": "版本说明",
+        "link": "/products/scope/release-notes"
+      }
+    ]
+  }
+],
+      "/products/scope/swarm-simulator/": [
+  {
+    "text": "Swarm Simulator",
+    "items": [
+      {
+        "text": "组件概览",
+        "link": "/products/scope/swarm-simulator/"
+      },
+      {
+        "text": "快速开始",
+        "link": "/products/scope/swarm-simulator/getting-started"
+      },
+      {
+        "text": "编队与舞步",
+        "link": "/products/scope/swarm-simulator/playback"
+      },
+      {
+        "text": "地面站联调",
+        "link": "/products/scope/swarm-simulator/connection"
+      },
+      {
+        "text": "常见问题",
+        "link": "/products/scope/swarm-simulator/troubleshooting"
+      },
+      {
+        "text": "完整手册",
+        "link": "/products/scope/swarm-simulator/user-guide"
+      }
+    ]
+  }
+],
       "/products/serein/": [
-        {
-          text: "Serein",
-          items: [
-            { text: "产品概览", link: "/products/serein/" },
-            { text: "快速开始", link: "/products/serein/getting-started" },
-            { text: "用户手册", link: "/products/serein/user-guide" },
-            { text: "数据与隐私", link: "/products/serein/data-privacy" },
-            { text: "版本与发布", link: "/products/serein/release-notes" },
-            { text: "开发者文档", link: "/products/serein/developer" }
-          ]
-        }
-      ],
+  {
+    "text": "Serein",
+    "items": [
+      {
+        "text": "产品概览",
+        "link": "/products/serein/"
+      },
+      {
+        "text": "快速开始",
+        "link": "/products/serein/getting-started"
+      },
+      {
+        "text": "用户手册",
+        "link": "/products/serein/user-guide"
+      },
+      {
+        "text": "公式与导出",
+        "link": "/products/serein/math-export"
+      },
+      {
+        "text": "思维导图与 XMind",
+        "link": "/products/serein/mindmap"
+      },
+      {
+        "text": "本地数据与恢复",
+        "link": "/products/serein/data-privacy"
+      },
+      {
+        "text": "版本与安装",
+        "link": "/products/serein/release-notes"
+      },
+      {
+        "text": "开发者入口",
+        "link": "/products/serein/developer"
+      }
+    ]
+  }
+],
       "/products/": [
         {
           text: "产品",
           items: [
-            { text: "产品总览", link: "/products/" },
-            { text: "SeryRemoteID", link: "/products/seryremoteid/" },
-            { text: "Serein", link: "/products/serein/" }
+            { text: "产品矩阵", link: "/products/" },
+            {
+              text: "产品架构与商业路径",
+              link: "/products/#product-architecture"
+            },
+            { text: "Serein", link: "/products/serein/" },
+            { text: "YSerein Swarm", link: "/products/swarm/" },
+            { text: "Serein Scope", link: "/products/scope/" },
+            { text: "SeryRemoteID", link: "/products/seryremoteid/" }
           ]
         }
       ],
@@ -208,6 +348,8 @@ export default defineConfig({
             buttonAriaLabel: "搜索产品文档"
           },
           modal: {
+            displayDetails: "显示详细结果",
+            backButtonTitle: "关闭搜索",
             noResultsText: "没有找到相关内容",
             resetButtonTitle: "清除查询",
             footer: {
@@ -223,6 +365,7 @@ export default defineConfig({
       level: [2, 3],
       label: "本页内容"
     },
+    skipToContentLabel: "跳到主要内容",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     darkModeSwitchLabel: "外观",
@@ -236,7 +379,7 @@ export default defineConfig({
       text: "最后更新"
     },
     footer: {
-      message: "产品、文档与工程证据，由 Y-Serein 核心维护者持续维护。",
+      message: '产品与文档 · <a href="/engineering/">研究与工程</a> · <a href="/about/">关于 YSerein</a>',
       copyright: "Copyright © 2026 Y-Serein"
     }
   }

@@ -59,7 +59,7 @@ Remote ID state aggregation
 - SecureCommand 和公钥管理。
 - Web 状态、升级、版本和签名验证。
 
-## 需要补充的时序信息
+## 请核对的时序信息
 
 | 项目 | 需要记录 |
 |---|---|

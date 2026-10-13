@@ -1,35 +1,12 @@
 ---
-title: 下载中心
-description: Y-Serein 产品版本、下载、校验和兼容性入口。
-pageClass: ys-downloads-page
+title: 版本与下载
+description: Windows 安装器、Scope 独立组件、SDK 与 SHA-256。
+layout: page
 ---
 
-# 下载中心
 
-正式下载页不只提供文件，还必须同时提供版本、适用硬件、校验值、升级路径、回滚条件和已知问题。
-
-::: warning 当前状态
-页面框架已建立。正式发布文件、版本号、SHA-256、签名方式和兼容矩阵需要由维护者提供后才能公开填写。
-:::
-
-## SeryRemoteID
-
-| 版本 / 日期 | 适用硬件 | 下载 | SHA-256 | 升级方式 | 回滚 / 已知问题 |
-|---|---|---|---|---|---|
-| 待补 / 发布日期待补 | 硬件版本待补 | [GitHub Releases](https://github.com/Y-Serein/SeryRemoteID/releases) | 待补 | 待补：串口 / Web OTA / 其他 | 回滚条件与已知问题待补 |
-
-下载前请先阅读[硬件与接线](/products/seryremoteid/hardware)、[OTA 与恢复](/products/seryremoteid/ota-recovery)和[兼容性验证](/products/seryremoteid/verification)。
-
-## Serein
-
-| 版本 / 日期 | 支持系统 | 安装包 | SHA-256 | 升级与迁移 | 已知问题 |
-|---|---|---|---|---|---|
-| 待补 / 发布日期待补 | Windows 验证待补 | [GitHub Releases](https://github.com/Y-Serein/Serein/releases) | 待补 | 待补 | 待补 |
-
-## 发布原则
-
-- 不把未经验证的构建产物标记为 Stable。
-- 每个硬件固件必须绑定兼容硬件和最低升级条件。
-- 每个下载必须提供校验值；签名方案确定后同时提供验证方法。
-- 破坏兼容性的变更必须写入升级说明和回滚条件。
-- 已知问题不隐藏，按影响范围和规避方法公开。
+<div class="resource-overview"><header class="resource-page-head"><p class="resource-kicker">Downloads</p><h1>选择产品与版本。</h1><p>Windows 安装器、Scope 独立组件和开发者 SDK。获取文件后，先核对版本与 SHA-256。</p></header>
+<DownloadCatalog />
+<section class="resource-section" id="public-releases"><h2>公开版本入口</h2><p>Serein 的公开历史安装版本为 <a href="https://github.com/Y-Serein/Serein/releases/tag/v0.0.4">v0.0.4</a>，与上方 1.0.4 不同。各版本功能以实际安装器为准。</p><div class="resource-links"><a href="https://github.com/Y-Serein/Serein/releases">Serein 版本记录 →</a><a href="https://github.com/Y-Serein/SeryRemoteID/releases">SeryRemoteID 固件 →</a><a href="/support/#software-downloads">其他版本获取</a></div></section>
+<section class="resource-section" id="scope-components"><header class="resource-section-head"><p class="resource-kicker">Scope components</p><h2>按需安装，独立更新。</h2><p>组件需要匹配的宿主、Core 与运行时环境。更新前先停止任务并关闭对应工作区。</p></header><DownloadCatalog components /></section>
+<section class="resource-section"><h2>安装与文件校验</h2><p>摘要匹配证明文件与公布的资产一致，不代替发布者签名、安装验收或设备验证。<a href="/downloads/verification">阅读校验与升级说明 →</a></p></section></div>

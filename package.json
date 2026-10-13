@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "node node_modules/vitepress/bin/vitepress.js dev --host 127.0.0.1",
     "build": "node node_modules/vitepress/bin/vitepress.js build",
-    "preview": "node node_modules/vitepress/bin/vitepress.js preview --host 127.0.0.1"
+    "preview": "node node_modules/vitepress/bin/vitepress.js preview --host 127.0.0.1",
+    "check": "node scripts/check-site.mjs"
   },
   "devDependencies": {
     "vitepress": "1.6.4"

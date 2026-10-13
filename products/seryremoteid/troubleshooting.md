@@ -26,7 +26,7 @@ description: 按电源、飞控输入、广播、Web、配置和升级问题进�
 | 有电但无飞控数据 | TX/RX、CAN-H/L、共地、波特率、飞控参数 | 查看对应[飞控集成](/products/seryremoteid/integrations) |
 | 身份状态无效 | UAS ID、BasicID、Operator ID、数据新鲜度 | 查看[参数配置](/products/seryremoteid/configuration) |
 | WiFi/BLE 接收不到 | 广播模式、信道、周期、接收工具 | 使用已知可靠抓包工具验证 |
-| Web 页面无法访问 | 网络模式、地址、设备状态 | 待补正式网络入口 |
+| Web 页面无法访问 | 网络模式、地址、设备状态 | 按型号确认正式网络入口 |
 | OTA 被拒绝 | 硬件版本、项目名、secure version、签名 | 查看[OTA 与恢复](/products/seryremoteid/ota-recovery) |
 | 重启后参数变化 | NVS、参数生效方式、固件迁移 | 导出诊断并提交问题 |
 
